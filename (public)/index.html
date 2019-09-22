@@ -37,32 +37,32 @@
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
-                                <span data-feather="calendar"></span>
+                                <i class="far fa-calendar-alt"></i>
                                 Calendar <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="send"></span>
+                                <i class="fas fa-plane-departure"></i>
                                 Flight Planner
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="navigation"></span>
+                                <i class="fab fa-uber"></i>
                                 Uber
                             </a>
                         </li>
                         <!-- Commented out for future feautres if time permits -->
                         <!-- <li class="nav-item">
                            <a class="nav-link" href="#">
-                               <span data-feather="users"></span>
+                               <i class="fas fa-users"></i>
                                Customers
                            </a>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" href="#">
-                               <span data-feather="bar-chart-2"></span>
+                               <i class="far fa-chart-bar"></i>
                                Reports
                            </a>
                        </li> -->
@@ -107,7 +107,11 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                     <div class="calendar">
-                        
+                        <!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+                        <h1>Welcome to My Awesome App</h1>
+                        <div id="firebaseui-auth-container"></div>
+                        <div id="loader">Loading...</div>
                     </div>
 
                     <!--Modal: Login / Register Form-->
@@ -243,6 +247,8 @@
         <script defer src="/__/firebase/6.6.2/firebase-database.js"></script>
         <script defer src="/__/firebase/6.6.2/firebase-messaging.js"></script>
         <script defer src="/__/firebase/6.6.2/firebase-storage.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
         <!-- initialize the SDK after all desired features are loaded -->
         <script defer src="/__/firebase/init.js"></script>
         <!-- Bootstrap Popper -->
