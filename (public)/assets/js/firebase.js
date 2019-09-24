@@ -17,6 +17,7 @@
         con.onDisconnect().remove();
       }
     });
+
     // When first loaded or when the connections list changes...
     connectionsRef.on("value", function (snap) {
       // Display the viewer count in the html.
@@ -41,7 +42,7 @@
       },
       // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
       signInFlow: 'popup',
-      signInSuccessUrl: 'projecti-14fca.firebaseapp.com',
+      signInSuccessUrl: '/',
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -53,5 +54,13 @@
       privacyPolicyUrl: '<your-privacy-policy-url>'
     };
     // The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
+    ui.start('#firebaseui-auth-container', uiConfig);
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+     console.log('loggedin')
+    } else {
+      // No user is signed in.
+    }
   });
