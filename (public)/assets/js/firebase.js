@@ -1,4 +1,5 @@
 $(document).ready(function () {
+ 
   var database = firebase.database();
   // connectionsRef references a specific location in our database.
   // All of our connections will be stored in this directory.
@@ -54,4 +55,19 @@ $(document).ready(function () {
   };
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
+
+   var admin = require('firebase-admin');
+admin.initializeApp({
+  credential: admin.credential.applicationDefault(),
+  databaseURL: 'https://ProjectI.firebaseio.com'
 });
+
+  admin.auth().getUser(uid)
+    .then(function (userRecord) {
+      // See the UserRecord reference doc for the contents of userRecord.
+      console.log('Successfully fetched user data:', userRecord.toJSON());
+    })
+    .catch(function (error) {
+      console.log('Error fetching user data:', error);
+    });
+    });
