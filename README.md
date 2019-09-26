@@ -1,7 +1,7 @@
 # ProjectI
 
 ### Summary
-ProjectI aka Executives Travel Assistance. Is made to incoroporate travel planes with logged in Executive Assistance that are representing cetain exectutive and making travel plans for them. 
+ProjectI aka Executives Travel Assistance. Is made to incoroporate travel planes with logged in Executive Assistants that are representing certain executive and making travel plans for them. 
 
 See the working app here:
 http://projecti-14fca.firebaseapp.com/
@@ -12,9 +12,8 @@ ProjectI uses a couple different applications and libaries:
 
  - [Firebase Hosting](https://firebase.google.com/products/hosting/)
  - [Firebase Database](https://firebase.google.com/products/firestore/)
- - [Firesbase Authentication](https://firebase.google.com/products/auth/)
+ - [Firebase Authentication](https://firebase.google.com/products/auth/)
  - [Skyscanner API](https://partners.skyscanner.net/developer-documentation)
- - [Uber API](https://developer.uber.com/docs)
  - [Google Calendar](https://developers.google.com/calendar/)
  - [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
  - [Jquery](https://api.jquery.com/) / Javascript
