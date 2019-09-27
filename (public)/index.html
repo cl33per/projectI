@@ -7,7 +7,7 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link rel="shortcut icon" href="assets/images/" type="image/x-icon">
     <link rel="icon" href="assets/images//favicon.ico" type="image/x-icon">
-    <title>Executive Assestant</title>
+    <title>Executive Assistant</title>
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
@@ -21,13 +21,18 @@
 
 <body>
     <!-- Start Main Body -->
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Fluid jumbotron</h1>
+              <p class="lead">" "</p>
+            </div>
+          </div>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Project I Dashboard</a>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Executive
-                    Signin</a>
+                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Sign Out</a>
             </li>
         </ul>
     </nav>
@@ -38,16 +43,21 @@
                 <div class="sidebar-sticky">
                     <div id="userImage" class="userImage"></div>
                     <ul class="nav flex-column">
+                        <li class="home-item">
+                            <a class="home-link active" href="#">
+                                <button type="button" id="homeBtn">Home</button>
+                              </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
                                 <i class="far fa-calendar-alt"></i>
-                                Calendar <span class="sr-only">(current)</span>
+                                <button type="button" id="calendarBtn"> Calendar</button>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-plane-departure"></i>
-                                Flight Planner
+                                <button type="button" id="flightBtn">Flight Planner</button>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -65,7 +75,7 @@
                     </ul>
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Contriubtors</span>
+                        <span>Contributors</span>
                         <a class="d-flex align-items-center text-muted" href="#">
                             <span data-feather="plus-circle"></span>
                         </a>
