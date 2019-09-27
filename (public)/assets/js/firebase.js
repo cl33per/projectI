@@ -63,6 +63,7 @@ $(document).ready(function () {
     }
   });
 
+ 
   function writeUserData(userId, name, email, imageUrl) {
     
     firebase.database().ref('users/' + userId).set({
