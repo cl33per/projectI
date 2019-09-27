@@ -22,17 +22,18 @@
 <body>
     <!-- Start Main Body -->
     <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Fluid jumbotron</h1>
-              <p class="lead">" "</p>
-            </div>
-          </div>
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">" "</p>
+        </div>
+    </div>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Project I Dashboard</a>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Sign Out</a>
+                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Sign
+                    Out</a>
             </li>
         </ul>
     </nav>
@@ -44,32 +45,48 @@
                     <div id="userImage" class="userImage"></div>
                     <ul class="nav flex-column">
                         <li class="home-item">
-                            <a class="home-link active" href="#">
-                                <button type="button" id="homeBtn">Home</button>
-                              </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                <i class="far fa-calendar-alt"></i>
-                                <button type="button" id="calendarBtn"> Calendar</button>
+                            <a class="nav-link" href="#">
+                                    <i class="far fa-calendar-alt"></i>
+                                <button class="btn btn-secondary" id="homeBtn">Home</button>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-plane-departure"></i>
-                                <button type="button" id="flightBtn">Flight Planner</button>
+                                <i class="far fa-calendar-alt"></i>
+                                <button class="btn btn-secondary" id="calendarBtn"> Calendar</button>
                             </a>
                         </li>
+                        <div class="dropdown nav-link">
+                            <i class="fas fa-plane-departure"></i>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Flights
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <button class="btn btn-secondary" id="flightBtn">Flight Arrivals</button>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <button class="btn btn-secondary" id="flightBtn">Flight Departures</button>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-users"></i>
-                                Customers
+                                <button class="btn btn-secondary" id="Customers">Customers</button>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="far fa-chart-bar"></i>
-                                Reports
+                                <button class="btn btn-secondary" id="reportsBtn">Reports</button>
                             </a>
                         </li>
                     </ul>
@@ -117,9 +134,9 @@
                     </div>
                     <div id="calendar"> </div>
                     <div id="flightPlanner"></div>
-                    <!--<div id="chart">
+                    <div id="chart">
                         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-                    </div>-->
+                    </div>
                 </div>
         </div>
     </div>

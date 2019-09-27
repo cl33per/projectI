@@ -70,6 +70,7 @@ $(document).ready(function () {
       email: email,
       profile_picture: imageUrl
     });
+
     var userPhoto = $('<img>');
     userPhoto.attr('src', imageUrl);
     userPhoto.attr('class', 'userimg');
