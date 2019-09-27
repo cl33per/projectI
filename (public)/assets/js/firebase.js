@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   var database = firebase.database();
   // connectionsRef references a specific location in our database.
   // All of our connections will be stored in this directory.
@@ -23,6 +24,7 @@ $(document).ready(function () {
     // The number of online users is the number of children in the connections list.
     $("#connected-viewers").text(snap.numChildren());
   });
+
   // Initialize the FirebaseUI Widget using Firebase.
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
   var uiConfig = {
@@ -41,7 +43,7 @@ $(document).ready(function () {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'projecti-14fca.firebaseapp.com',
+    signInSuccessUrl: '/',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -54,4 +56,26 @@ $(document).ready(function () {
   };
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      writeUserData(user.uid, user.displayName, user.email, user.photoURL);
+    } else {
+    }
+  });
+
+ 
+  function writeUserData(userId, name, email, imageUrl) {
+    
+    firebase.database().ref('users/' + userId).set({
+      username: name,
+      email: email,
+      profile_picture: imageUrl
+    });
+    var userPhoto = $('<img>');
+    userPhoto.attr('src', imageUrl);
+    userPhoto.attr('class', 'userimg');
+
+    $('#userImage').append(userPhoto);
+  }
+  
 });
