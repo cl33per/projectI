@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   var database = firebase.database();
   // connectionsRef references a specific location in our database.
   // All of our connections will be stored in this directory.
