@@ -19,13 +19,18 @@
 </head>
 <body>
     <!-- Start Main Body -->
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Fluid jumbotron</h1>
+              <p class="lead">" "</p>
+            </div>
+          </div>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Project I Dashboard</a>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Executive
-                    Sign In</a>
+                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Sign Out</a>
             </li>
         </ul>
     </nav>
@@ -35,26 +40,24 @@
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
+                        <li class="home-item">
+                            <a class="home-link active" href="#">
+                                <button type="button" id="homeBtn">Home</button>
+                              </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
                                 <i class="far fa-calendar-alt"></i>
-                                Calendar <span class="sr-only">(current)</span>
+                                <button type="button" id="calendarBtn"> Calendar</button>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-plane-departure"></i>
-                                Flight Planner
+                                <button type="button" id="flightBtn">Flight Planner</button>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fab fa-uber"></i>
-                                Uber
-                            </a>
-                        </li>
-                        <!-- Commented out for future feautres if time permits -->
-                        <!-- <li class="nav-item">
                            <a class="nav-link" href="#">
                                <i class="fas fa-users"></i>
                                Customers
@@ -65,7 +68,7 @@
                                <i class="far fa-chart-bar"></i>
                                Reports
                            </a>
-                       </li> -->
+                       </li>
                     </ul>
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -106,116 +109,12 @@
             <!-- Star of Main Body -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                    <div class="calendar">
-                        <!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
-                        <h1>Welcome to My Awesome App</h1>
-                        <div id="firebaseui-auth-container"></div>
-                        <div id="loader">Loading...</div>
+                    <div id="login">
+                            <div id=“firebaseui-auth-container”></div>
+                            <div id=“loader”>Loading...</div>
                     </div>
-
-                    <!--Modal: Login / Register Form-->
-                    <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog cascading-modal" role="document">
-                            <!--Content-->
-                            <div class="modal-content">
-                                <!--Modal cascading tabs-->
-                                <div class="modal-c-tabs">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-                                                    class="fas fa-user mr-1"></i>
-                                                Login</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                                                    class="fas fa-user-plus mr-1"></i>
-                                                Register</a>
-                                        </li>
-                                    </ul>
-                                    <!-- Tab panels -->
-                                    <div class="tab-content">
-                                        <!--Panel 7-->
-                                        <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-                                            <!--Body Login-->
-                                            <div class="modal-body mb-1">
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-envelope prefix"></i>
-                                                    <input type="email" id="modalLRInput10"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput10">Your email</label>
-                                                </div>
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-lock prefix"></i>
-                                                    <input type="password" id="modalLRInput11"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput11">Your password</label>
-                                                </div>
-                                                <div class="text-center mt-2">
-                                                    <button class="btn btn-primary btn-lg btn-block">Login <i
-                                                            class="fas fa-sign-in ml-1"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--Footer-->
-                                            <div class="modal-footer">
-                                                <div class="options text-center text-md-right mt-1">
-                                                    <p>Forgot <a href="#" class="blue-text">Password?</a></p>
-                                                </div>
-                                                <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                                                    data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                        <!--/.Panel 7-->
-                                        <!--Panel 8-->
-                                        <div class="tab-pane fade" id="panel8" role="tabpanel">
-                                            <!--Body Register-->
-                                            <div class="modal-body">
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-envelope prefix"></i>
-                                                    <input type="email" id="modalLRInput12"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput12">Your email</label>
-                                                </div>
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-lock prefix"></i>
-                                                    <input type="password" id="modalLRInput13"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput13">Your password</label>
-                                                </div>
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-lock prefix"></i>
-                                                    <input type="password" id="modalLRInput14"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput14">Repeat password</label>
-                                                </div>
-                                                <div class="text-center form-sm mt-2">
-                                                    <button class="btn btn-primary btn-lg btn-block">Register<i
-                                                            class="fas fa-sign-in ml-1"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--Footer-->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                                                    data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                        <!--/.Panel 8-->
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--/.Content-->
-                        </div>
-                    </div>
-                    <!--Modal: Login / Register Form-->
-
+                    <div id="calendar"> </div>
+                    <div id="flightPlanner"></div>
                     <!-- Commented out for reports page if time premits -->
                     <!-- <div
                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -251,6 +150,8 @@
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
         <!-- initialize the SDK after all desired features are loaded -->
         <script defer src="/__/firebase/init.js"></script>
+        <!-- Local Firebase Files -->
+        <script src='assets/js/firebase.js'></script>
         <!-- Bootstrap Popper -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
             integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
@@ -264,7 +165,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
         <!-- Local Scripts  -->
         <script src='assets/js/app.js'></script>
-        <script src='assets/js/chart.js'></script>
-        <script src='assets/js/firebase.js'></script>
+        <!-- <script src='assets/js/chart.js'></script> -->
+        <!-- <script defer src='assets/js/executives.js'></script> -->
+        <script src='assets/js/calendar.js'></script>
 </body>
 </html>
