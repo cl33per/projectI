@@ -127,13 +127,15 @@
             </nav>
             <!-- End of Sidebar -->
             <!-- Star of Main Body -->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+           <role="main" class="col-md-9  col-lg-10 px-4"> </role>
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                     <div id="login">
                         <div id="firebaseui-auth-container"></div>
                     </div>
                     <div id="calendar"> </div>
                     <div id="flightPlanner">
+                        <div class="row" id="arrivals">
+                            <div class="col-lg-12">
                             <div class="card-header" id="card-header-arrival">Arrivals</div>
                             <div class="card-body">
                                 <table class="table table-sm table-hover" id='arrivals-table'>
@@ -151,10 +153,14 @@
                                     </tbody>
                                 </table>
                             </div>
-                       
+                        </div>
+                        </div>
                         <!--  DEPARTURES -->
-                        <div class="row">
+                        <div class="row" id="departures">
                             <div class="col-md-12">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-12">
                                 <div class="card mb-4">
                                     <div class="card-header" id="card-header-departures">Departures</div>
                                     <div class="card-body">
@@ -182,6 +188,7 @@
                     </div>
                 </div>
         </div>
+    </role>
     </div>
     <!--/.Content-->
     </div>
