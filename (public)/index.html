@@ -7,7 +7,7 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link rel="shortcut icon" href="assets/images/" type="image/x-icon">
     <link rel="icon" href="assets/images//favicon.ico" type="image/x-icon">
-    <title>Executive Assistant</title>
+    <title>Assistants Assistant</title>
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
@@ -18,36 +18,38 @@
     <!-- Local CSS -->
     <link rel='stylesheet' href='assets/css/flight.css'>
     <link rel='stylesheet' href='assets/css/style.css'>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Start Main Body -->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">" "</p>
+            <h1 class="display-4" id="aa">Assistant's Assistant</h1>
+            <p class="lead" id="unknown">"Keep it plane and simple." — Unknown</p>
         </div>
     </div>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Project I Dashboard</a>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow color">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">A.A. Dashboard</a>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Sign
+                <a href="" class="btn btn-secondary btn-rounded" data-toggle="modal" data-target="#modalLRForm" id="signOut">Sign
                     Out</a>
             </li>
         </ul>
     </nav>
     <!-- Start of Sidebar -->
-    <div class="container-fluid">
+    <div class="container-fluid" class="sidebar">
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
+                <div class="sidebar-sticky" id="side">
                     <div id="userImage" class="userImage"></div>
                     <ul class="nav flex-column">
-                        <li class="home-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="far fa-calendar-alt"></i>
+                                    <i class="fas fa-home"></i>
                                 <button class="btn btn-secondary" id="homeBtn">Home</button>
                             </a>
                         </li>
@@ -63,17 +65,17 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Flights
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropDown">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <i class="fas fa-plane-departure"></i>
-                                        <button class="btn btn-secondary" id="flightBtn">Flight Arrivals</button>
+                                        <button class="btn btn-secondary" id="flightBtnA">Flight Arrivals</button>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <i class="fas fa-plane-departure"></i>
-                                        <button class="btn btn-secondary" id="flightBtn">Flight Departures</button>
+                                        <button class="btn btn-secondary" id="flightBtnB">Flight Departures</button>
                                     </a>
                                 </li>
                             </div>
@@ -94,31 +96,28 @@
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                         <span>Contributors</span>
-                        <a class="d-flex align-items-center text-muted" href="#">
-                            <span data-feather="plus-circle"></span>
-                        </a>
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Chelsea Crooke
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Cody Leeper
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Kari Thomas
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Tony Waterfield
                             </a>
