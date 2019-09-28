@@ -16,6 +16,7 @@
     <!-- Fontawesome Libary Icons List -->
     <script src="https://kit.fontawesome.com/576f8154b0.js" crossorigin="anonymous"></script>
     <!-- Local CSS -->
+    <link rel='stylesheet' href='assets/css/flight.css'>
     <link rel='stylesheet' href='assets/css/style.css'>
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
@@ -132,7 +133,50 @@
                         <div id="firebaseui-auth-container"></div>
                     </div>
                     <div id="calendar"> </div>
-                    <div id="flightPlanner"></div>
+                    <div id="flightPlanner">
+                            <div class="card-header" id="card-header-arrival">Arrivals</div>
+                            <div class="card-body">
+                                <table class="table table-sm table-hover" id='arrivals-table'>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Airline</th>
+                                            <th scope="col">Flight#</th>
+                                            <th scope="col">From City</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Arrival Time</th>
+                                            <th scope="col">Gate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                       
+                        <!--  DEPARTURES -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card mb-4">
+                                    <div class="card-header" id="card-header-departures">Departures</div>
+                                    <div class="card-body">
+                                        <table class="table table-sm table-hover" id='departures-table'>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Airline</th>
+                                                    <th scope="col">Flight#</th>
+                                                    <th scope="col">To City</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Departure Time</th>
+                                                    <th scope="col">Gate</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="chart">
                         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
                     </div>
@@ -147,9 +191,8 @@
     <!-- End of Main Body -->
     </div>
     <!-- Footer Scripts -->
-    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
-        integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
-    </script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -177,6 +220,7 @@
     <!-- Local Scripts  -->
     <script src='assets/js/app.js'></script>
     <script src='assets/js/chart.js'></script>
+    <script src='assets/js/flight.js'></script>
     <!-- <script defer src='assets/js/executives.js'></script> -->
 
 </body>
