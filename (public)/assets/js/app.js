@@ -1,35 +1,44 @@
 $(document).ready(function(){
   $('#chart').hide();
+  $("#arrival").hide();
+  $("#departures").hide();
   $("#flightPlanner").hide();
-})
+});
 
- $("#calendarBtn").on("click", function() {
-      // window.location.href = "../js/calendar.js";
-   console.log ('i am a computer')
-      });
-   
  $("#homeBtn").on("click", function() {
-   console.log('ciao')
-      //window.location.href = "https://www.example.com";
+  
     });
+
+ //$("#calendarBtn").on("click", function() {
+      // window.location.href = "../js/calendar.js";
+   //console.log ('i am a computer')
+     // });
 
  $("#flightBtnA").on("click", function() {
-   console.log('arrivederci')
-   //window.location.href = "https://www.example.com"
+   $("#flightPlanner").show();
+   $("#arrivals").show();
+   $("#departures").hide();
+   $("#chart").hide();
+  });
+
+  $("#flightBtnB").on("click", function(){
+    $("#flightPlanner").show();
+    $("#departures").show();
+    $("#arrivals").hide();
+    $("#chart").hide();
    });
 
-   $("#flightBtnB").on("click", function() {
-    console.log('arrivederci')
-    //window.location.href = "https://www.example.com"
-    });
+   
 
-  $("#Customers").on("click", function(){
-    console.log('hi');
-    });
+  //$("#Customers").on("click", function(){
+    //console.log('hi');
+    //});
 
   $("#reportsBtn").on("click", function(){
-    console.log('hola');
-    });
+    $("#chart").show();
+    $("#departures").hide();
+    $("#arrivals").hide();
+   });
 
 
 
