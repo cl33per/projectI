@@ -117,3 +117,49 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+.userImage{
+    text-align: center;
+}
+.userimg {
+ border-radius: 100%;
+width: 50%;
+}
+
+#aa , #unknown{
+    text-align: center;
+
+}
+#unknown{
+    font-style: italic;
+}
+#aa{
+    font-weight: bolder;
+}
+body{
+    font-family: 'Crete Round', serif;
+    background-color: #F6F8FF;
+}
+.jumbotron{
+    background-color: #EEF36A;
+    border: 2px solid #E2E2E2;
+}
+#homeBtn , #calendarBtn , #dropdownMenuButton , #flightBtnA , #flightBtnB , #Customers , #reportsBtn{
+    background-color: #3F3047;
+    color:  #F6F8FF;
+}
+.navbar{
+    color:  #F6F8FF;
+}
+#signOut{
+    background-color: #E2E2E2;
+    color: #3F3047;
+}
+#dropDown{
+    background-color: #F6F8FF;
+}
+#side{
+    background-color: #E2E2E2;
+}
+#name{
+    color: #3F3047;
+}

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link rel="shortcut icon" href="assets/images/" type="image/x-icon">
     <link rel="icon" href="assets/images//favicon.ico" type="image/x-icon">
-    <title>Executive Assestant</title>
+    <title>Assistants Assistant</title>
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
@@ -15,253 +16,213 @@
     <!-- Fontawesome Libary Icons List -->
     <script src="https://kit.fontawesome.com/576f8154b0.js" crossorigin="anonymous"></script>
     <!-- Local CSS -->
+    <link rel='stylesheet' href='assets/css/flight.css'>
     <link rel='stylesheet' href='assets/css/style.css'>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Start Main Body -->
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Project I Dashboard</a>
+    <div class="jumbotron jumbotron-fluid col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="container">
+            <h1 class="display-4" id="aa">Assistant's Assistant</h1>
+            <p class="lead" id="unknown">"Keep it plane and simple." — Unknown</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow color">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">A.A. Dashboard</a>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#modalLRForm">Executive
-                    Signin</a>
+                <a href="" class="btn btn-secondary btn-rounded" data-toggle="modal" data-target="#modalLRForm" id="signOut">Sign
+                    Out</a>
             </li>
         </ul>
     </nav>
     <!-- Start of Sidebar -->
-    <div class="container-fluid">
+    <div class="container-fluid" class="sidebar">
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
+                <div class="sidebar-sticky" id="side">
+                    <div id="userImage" class="userImage"></div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-home"></i>
+                                <button class="btn btn-secondary" id="homeBtn">Home</button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
                                 <i class="far fa-calendar-alt"></i>
-                                Calendar <span class="sr-only">(current)</span>
+                                <button class="btn btn-secondary" id="calendarBtn"> Calendar</button>
+                            </a>
+                        </li>
+                        <div class="dropdown nav-link">
+                            <i class="fas fa-plane-departure"></i>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Flights
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropDown">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <button class="btn btn-secondary" id="flightBtnA">Flight Arrivals</button>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <button class="btn btn-secondary" id="flightBtnB">Flight Departures</button>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-users"></i>
+                                <button class="btn btn-secondary" id="Customers">Customers</button>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-plane-departure"></i>
-                                Flight Planner
+                                <i class="far fa-chart-bar"></i>
+                                <button class="btn btn-secondary" id="reportsBtn">Reports</button>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fab fa-uber"></i>
-                                Uber
-                            </a>
-                        </li>
-                        <!-- Commented out for future feautres if time permits -->
-                        <!-- <li class="nav-item">
-                           <a class="nav-link" href="#">
-                               <i class="fas fa-users"></i>
-                               Customers
-                           </a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="#">
-                               <i class="far fa-chart-bar"></i>
-                               Reports
-                           </a>
-                       </li> -->
                     </ul>
-                    <!-- <h6
+                    <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Contriubtors</span>
-                        <a class="d-flex align-items-center text-muted" href="#">
-                            <span data-feather="plus-circle"></span>
-                        </a>
+                        <span>Contributors</span>
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Chelsea Crooke
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Cody Leeper
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Kari Thomas
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
+                            <a class="nav-link" href="#" target="_blank" id="name">
                                 <span data-feather="file-text"></span>
                                 Tony Waterfield
                             </a>
                         </li>
-                    </ul> -->
+                    </ul>
                 </div>
             </nav>
             <!-- End of Sidebar -->
             <!-- Star of Main Body -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    <div id="login">
+                        <div id="firebaseui-auth-container"></div>
+                    </div>
                     <div id="calendar"> </div>
-                    <div id="flightPlanner"></div>
-                    <div id="uber"> </div>                        
-                    <!--Modal: Login / Register Form-->
-                    <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog cascading-modal" role="document">
-                            <!--Content-->
-                            <div class="modal-content">
-                                <!--Modal cascading tabs-->
-                                <div class="modal-c-tabs">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-                                                    class="fas fa-user mr-1"></i>
-                                                Login</a>
-                                        <!-- </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                                                    class="fas fa-user-plus mr-1"></i>
-                                                Register</a>
-                                        </li> -->
-                                    </ul>
-                                    <!-- Tab panels -->
-                                    <div class="tab-content">
-                                        <!--Panel 7-->
-                                        <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-                                            <!--Body Login-->
-                                            <div class="modal-body mb-1">
-                                                <div id="firebaseui-auth-container"></div>
-                                                <div id="loader">Loading...</div>
-                                                <!-- <div class="md-form form-sm">
-                                                    <i class="fas fa-envelope prefix"></i>
-                                                    <input type="email" id="modalLRInput10"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput10">Your email</label>
-                                                </div>
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-lock prefix"></i>
-                                                    <input type="password" id="modalLRInput11"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput11">Your password</label>
-                                                </div>
-                                                <div class="text-center mt-2">
-                                                    <button class="btn btn-primary btn-lg btn-block">Login <i
-                                                            class="fas fa-sign-in ml-1"></i></button>
-                                                </div> -->
-                                            </div>
-                                            <!--Footer-->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                                                    data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                        <!--/.Panel 7-->
-                                        <!--Panel 8-->
-                                        <div class="tab-pane fade" id="panel8" role="tabpanel">
-                                            <!--Body Register-->
-                                            <div class="modal-body">
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-envelope prefix"></i>
-                                                    <input type="email" id="modalLRInput12"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput12">Your email</label>
-                                                </div>
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-lock prefix"></i>
-                                                    <input type="password" id="modalLRInput13"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput13">Your password</label>
-                                                </div>
-                                                <div class="md-form form-sm">
-                                                    <i class="fas fa-lock prefix"></i>
-                                                    <input type="password" id="modalLRInput14"
-                                                        class="form-control form-control-sm validate">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="modalLRInput14">Repeat password</label>
-                                                </div>
-                                                <div class="text-center form-sm mt-2">
-                                                    <button class="btn btn-primary btn-lg btn-block">Register<i
-                                                            class="fas fa-sign-in ml-1"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--Footer-->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                                                    data-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                        <!--/.Panel 8-->
+                    <div id="flightPlanner">
+                            <div class="card-header" id="card-header-arrival">Arrivals</div>
+                            <div class="card-body">
+                                <table class="table table-sm table-hover" id='arrivals-table'>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Airline</th>
+                                            <th scope="col">Flight#</th>
+                                            <th scope="col">From City</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Arrival Time</th>
+                                            <th scope="col">Gate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                       
+                        <!--  DEPARTURES -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card mb-4">
+                                    <div class="card-header" id="card-header-departures">Departures</div>
+                                    <div class="card-body">
+                                        <table class="table table-sm table-hover" id='departures-table'>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Airline</th>
+                                                    <th scope="col">Flight#</th>
+                                                    <th scope="col">To City</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Departure Time</th>
+                                                    <th scope="col">Gate</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
-
                                 </div>
                             </div>
-                            <!--/.Content-->
                         </div>
                     </div>
-                    <!--Modal: Login / Register Form-->
-
-                    <!-- Commented out for reports page if time premits -->
-                    <!-- <div
-                   class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                   <h1 class="h2">Dashboard</h1>
-                   <div class="btn-toolbar mb-2 mb-md-0">
-                       <div class="btn-group mr-2">
-                           <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                           <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                       </div>
-                       <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                           <span data-feather="calendar"></span>
-                           This week
-                       </button>
-                   </div>
-               </div> -->
-                    <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+                    <div id="chart">
+                        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                    </div>
                 </div>
-            </main>
-            <!-- End of Main Body -->
         </div>
-        <!-- Footer Scripts -->
-        <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
-            integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
-        </script>
-        <!-- update the version number as needed -->
-        <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/6.6.2/firebase-auth.js"></script>
-        <script defer src="/__/firebase/6.6.2/firebase-database.js"></script>
-        <script defer src="/__/firebase/6.6.2/firebase-messaging.js"></script>
-        <script defer src="/__/firebase/6.6.2/firebase-storage.js"></script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-        <!-- initialize the SDK after all desired features are loaded -->
-        <script defer src="/__/firebase/init.js"></script>
-        <!-- Local Firebase Files -->
-        <script src='assets/js/firebase.js'></script>
-        <!-- Bootstrap Popper -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
-            integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
-        </script>
-        <!-- Bootstrap minJS -->
-        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
-            integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'>
-        </script>
-        <!-- Feather Icons -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <!-- Local Scripts  -->
-        <script src='assets/js/app.js'></script>
-        <!-- <script src='assets/js/chart.js'></script> -->
-        <!-- <script defer src='assets/js/executives.js'></script> -->
-        <script src='assets/js/calendar.js'></script>
+    </div>
+    <!--/.Content-->
+    </div>
+    </div>
+    </div>
+    </main>
+    <!-- End of Main Body -->
+    </div>
+    <!-- Footer Scripts -->
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.6.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.6.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.6.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.6.2/firebase-storage.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- Local Firebase Files -->
+    <script src='assets/js/firebase.js'></script>
+    <!-- Bootstrap Popper -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
+        integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
+    </script>
+    <!-- Bootstrap minJS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
+        integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'>
+    </script>
+    <!-- Feather Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!-- Local Scripts  -->
+    <script src='assets/js/app.js'></script>
+    <script src='assets/js/chart.js'></script>
+    <script src='assets/js/flight.js'></script>
+    <!-- <script defer src='assets/js/executives.js'></script> -->
+
 </body>
+
 </html>
