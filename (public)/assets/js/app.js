@@ -3,6 +3,7 @@ $(document).ready(function(){
   $("#arrival").hide();
   $("#departures").hide();
   $("#flightPlanner").hide();
+
 });
 
  $("#homeBtn").on("click", function() {
