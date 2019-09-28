@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('#chart').hide();
+  $("#flightPlanner").hide();
 })
 
  $("#calendarBtn").on("click", function() {
