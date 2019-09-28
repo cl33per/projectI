@@ -127,12 +127,12 @@
             </nav>
             <!-- End of Sidebar -->
             <!-- Star of Main Body -->
-           <role="main" class="col-md-9  col-lg-10 px-4"> </role>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
                     <div id="login">
                         <div id="firebaseui-auth-container"></div>
                     </div>
-                    <div id="calendar"> </div>
+                    <div id="calendar"></div>
                     <div id="flightPlanner">
                         <div class="row" id="arrivals">
                             <div class="col-lg-12">
@@ -188,7 +188,7 @@
                     </div>
                 </div>
         </div>
-    </role>
+    </main>
     </div>
     <!--/.Content-->
     </div>
@@ -198,7 +198,7 @@
     <!-- End of Main Body -->
     </div>
     <!-- Footer Scripts -->
-    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
@@ -226,11 +226,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <!-- Local Scripts  -->
     <script src='assets/js/app.js'></script>
-    <script src='assets/js/moment.min.js'></script>
     <script src='assets/js/chart.js'></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.min.js"></script> 
+    <script src="assets/js/googlecalendarintegration.js"></script>
     <script src='assets/js/flight.js'></script>
-    <!-- <script defer src='assets/js/executives.js'></script> -->
-
+    <script>
+    $(function(){
+    $('#calendar').fullCalendar({
+    googleCalendarApiKey: 'AIzaSyABIl9Bw1hKOBTLMyT2LBvjW210yoEYCXs',
+    events: {
+    googleCalendarId: 'corporateexecutive0gmail.com'
+    }
+    });
+    });
+    </script>
 </body>
 
 </html>

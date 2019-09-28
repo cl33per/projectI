@@ -27,9 +27,9 @@ $(document).ready( function(){
   }
 
   $.ajax(settings).done(function (response) {
-     console.log("from ajax: " , response);
+    //  console.log("from ajax: " , response);
      arr_response = response;
-     console.log("from ajax arr_response: " , arr_response);
+    //  console.log("from ajax arr_response: " , arr_response);
      // arr_list_current = arr_list_limit;   
       var object_length = response.fidsData.length;
       if (object_length < arr_list_limit) {
@@ -38,9 +38,9 @@ $(document).ready( function(){
       else {
          var panel_limit = arr_list_limit;
       }
-      console.log("arr_current_list: " , arr_list_current);
-      console.log("object_length" , object_length);
-      console.log("remaining_to_list: " , remaining_to_list);
+      // console.log("arr_current_list: " , arr_list_current);
+      // console.log("object_length" , object_length);
+      // console.log("remaining_to_list: " , remaining_to_list);
       var display_current_msg = arr_list_current + 1; 
       var arrival_progress_msg = "Arrivals:    " + display_current_msg + "  -  " + panel_limit + "   of   " + object_length;
       $("#card-header-arrival").text(arrival_progress_msg);
@@ -69,10 +69,10 @@ $(document).ready( function(){
 
 function arrivals_form_list() {
   $("#arrivals-table > tbody").empty();
-  console.log("arr_list_current: " , arr_list_current);
+  // console.log("arr_list_current: " , arr_list_current);
 
   var object_length = arr_response.fidsData.length;
-  console.log("object_length: " , object_length);
+  // console.log("object_length: " , object_length);
   var remaining_to_list = object_length - arr_list_current;
   if (remaining_to_list === 0) {
      arr_list_current = 0;
@@ -84,14 +84,14 @@ function arrivals_form_list() {
   else {
     var panel_limit = arr_list_current + remaining_to_list;
   }
-  console.log("arr_current_list: " , arr_list_current);
-  console.log("object_length" , object_length);
-  console.log("remaining_to_list: " , remaining_to_list);
+  // console.log("arr_current_list: " , arr_list_current);
+  // console.log("object_length" , object_length);
+  // console.log("remaining_to_list: " , remaining_to_list);
   var display_current_msg = arr_list_current + 1; 
   var arrival_progress_msg = "Arrivals:    " + display_current_msg + "  -  " + panel_limit + "   of   " + object_length;
   $("#card-header-arrival").text(arrival_progress_msg);
   for (x = arr_list_current; x < panel_limit; x++) {
-    console.log("inside for: arr_current_list: " , arr_list_current);
+    // console.log("inside for: arr_current_list: " , arr_list_current);
     var addAirline = arr_response.fidsData[x].airlineName;
     var addFlight = arr_response.fidsData[x].flight;
     var addCity = arr_response.fidsData[x].city;
@@ -112,7 +112,7 @@ var newRow = $("<tr>").append(
   arr_list_current++;
 };
 
-console.log("end of function/ arr_list_current" , arr_list_current);
+// console.log("end of function/ arr_list_current" , arr_list_current);
 }
 
 
@@ -143,9 +143,9 @@ $.ajax(settings).done(function (response) {
   else {
      var panel_limit = dep_list_limit;
   }
-  console.log("dep_current_list: " , dep_list_current);
-  console.log("object_length" , object_length);
-  console.log("remaining_to_list: " , remaining_to_list);
+  // console.log("dep_current_list: " , dep_list_current);
+  // console.log("object_length" , object_length);
+  // console.log("remaining_to_list: " , remaining_to_list);
   var display_current_msg = dep_list_current + 1; 
   var departure_progress_msg = "Departures:    " + display_current_msg + "  -  " + panel_limit + "   of   " + object_length;
   $("#card-header-departures").text(departure_progress_msg);
@@ -174,10 +174,10 @@ $.ajax(settings).done(function (response) {
 
 function departures_form_list() {
 $("#departures-table > tbody").empty();
-console.log("dep_list_current: " , dep_list_current);
+// console.log("dep_list_current: " , dep_list_current);
 
 var object_length = dep_response.fidsData.length;
-console.log("object_length: " , object_length);
+// console.log("object_length: " , object_length);
 var remaining_to_list = object_length - dep_list_current;
 if (remaining_to_list === 0) {
    dep_list_current = 0;
@@ -190,9 +190,9 @@ else {
   var panel_limit = dep_list_current + remaining_to_list;
 }
 
-console.log("dep_current_list: " , dep_list_current);
-console.log("object_length" , object_length);
-console.log("remaining_to_list: " , remaining_to_list);
+// console.log("dep_current_list: " , dep_list_current);
+// console.log("object_length" , object_length);
+// console.log("remaining_to_list: " , remaining_to_list);
 var display_current_msg = dep_list_current + 1; 
 var departure_progress_msg = "Departures:    " + display_current_msg + "  -  " + panel_limit + "   of   " + object_length;
 $("#card-header-departures").text(departure_progress_msg);
@@ -217,7 +217,7 @@ var newRow = $("<tr>").append(
   dep_list_current++;
 };
 
-console.log("end of function/ dep_list_current" , dep_list_current);
+// console.log("end of function/ dep_list_current" , dep_list_current);
 }
 
 
