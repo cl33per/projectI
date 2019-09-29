@@ -6,9 +6,13 @@ $(document).ready(function () {
   $('#calendar').hide();
 });
 
-// $('#homeBtn').on('click', function () {
-// });
-
+$("#calendarBtn").on("click", function() {
+  $("#calendar").show();
+  $('#chart').hide();
+  $("#arrival").hide();
+  $("#departures").hide();
+  $("#flightPlanner").hide();
+});
 
 $('#flightBtnA').on('click', function () {
   $('#flightPlanner').show();
