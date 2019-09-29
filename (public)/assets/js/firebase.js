@@ -32,13 +32,8 @@ $(document).ready(function () {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
-        return true;
+        return false;
       }
-      // uiShown: function () {
-      //   // The widget is rendered.
-      //   // Hide the loader.
-      //   document.getElementById('loader').style.display = 'none';
-      // }
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
@@ -48,9 +43,9 @@ $(document).ready(function () {
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
     // Terms of service url.
-    tosUrl: '<your-tos-url>',
+    tosUrl: 'https://www.youtube.com/watch?v=oHg5SJYRHA0',
     // Privacy policy url.
-    privacyPolicyUrl: '<your-privacy-policy-url>'
+    privacyPolicyUrl: 'https://www.youtube.com/watch?v=oHg5SJYRHA0'
   };
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
@@ -58,12 +53,18 @@ $(document).ready(function () {
     if (user) {
       writeUserData(user.uid, user.displayName, user.email, user.photoURL);
     } else {
+      $('#chart').hide();
+      $("#arrival").hide();
+      $("#departures").hide();
+      $("#flightPlanner").hide();
+      $("#calendar").hide();
     }
   });
 
- 
+
+
   function writeUserData(userId, name, email, imageUrl) {
-    
+
     firebase.database().ref('users/' + userId).set({
       username: name,
       email: email,
@@ -76,5 +77,13 @@ $(document).ready(function () {
 
     $('#userImage').append(userPhoto);
   }
-  
+
+  $('#signOut').on("click", function () {
+  firebase.auth().signOut().then(function () {
+    // Sign-out successful.
+    
+  }).catch(function (error) {
+    // An error happened.
+  });
+});
 });
