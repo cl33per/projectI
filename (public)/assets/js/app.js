@@ -28,21 +28,32 @@ $("#flightBtnA").on("click", function () {
   $("#departures").hide();
   $("#chart").hide();
   $("#calendar").hide();
+  $('#calendar').hide();
 });
 
 $("#flightBtnB").on("click", function () {
   $("#flightPlanner").show();
   $("#departures").show();
+   $('#calendar').hdie();
   $("#arrivals").hide();
   $("#chart").hide();
   $("#calendar").hide();
 });
+
 
 $("#Customers").on("click", function(){
   $("#departures").hide();
   $("#arrivals").hide();
   $("#chart").hide();
   $("#calendar").hide();
+});
+
+$("#calendarBtn").on("click", function () {
+  $('#calendar').show();
+  $("#flightPlanner").hide();
+  $("#arrivals").hide();
+  $("#departures").hide();
+  $("#chart").hide();
 });
 
 $("#reportsBtn").on("click", function () {
