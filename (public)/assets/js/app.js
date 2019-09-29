@@ -38,6 +38,8 @@ $("#calendarBtn").on("click", function () {
 
 $("#reportsBtn").on("click", function () {
   $("#chart").show();
+  $("#flightPlanner").hide();
   $("#departures").hide();
   $("#arrivals").hide();
+  $('#calendar').hide();
 });
