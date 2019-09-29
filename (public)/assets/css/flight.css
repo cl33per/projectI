@@ -1,11 +1,11 @@
-.flightPlanner{
+.flightPlanner {
     width: 100%;
 }
 
 .card-header {
     font-size: 20px;
     font-weight: bolder;
-    color:#3f3047;
+    color: #3f3047;
 
     align-items: center;
     border-style: solid;
@@ -25,7 +25,7 @@
 
 
 #train-table th,
-td {
+#train-table td {
     display: inline-block;
     width: 20%;
     border-color: #e2e2e2;
@@ -33,7 +33,7 @@ td {
 }
 
 #train-add-table th,
-td {
+#train-table td {
     display: inline-block;
     width: 25%;
     border-color: #e2e2e2;
@@ -65,5 +65,5 @@ td {
 #submit-add-train {
     margin-top: 15px;
     border-radius: 8px;
-    background-color:#eef36a;
+    background-color: #eef36a;
 }

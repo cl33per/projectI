@@ -163,3 +163,7 @@ body{
 #name{
     color: #3F3047;
 }
+
+#calendar{
+    height: 100%;
+}
