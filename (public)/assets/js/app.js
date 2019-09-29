@@ -1,46 +1,53 @@
-$(document).ready(function(){
+$(document).ready(function () {
   $('#chart').hide();
   $("#arrival").hide();
   $("#departures").hide();
   $("#flightPlanner").hide();
-
+  $("#calendar").hide();
 });
 
- $("#homeBtn").on("click", function() {
-  
-    });
+$("#homeBtn").on("click", function () {
+  $('#chart').hide();
+  $("#arrival").hide();
+  $("#departures").hide();
+  $("#flightPlanner").hide();
+  $("#calendar").hide();
+});
 
- //$("#calendarBtn").on("click", function() {
-      // window.location.href = "../js/calendar.js";
-   //console.log ('i am a computer')
-     // });
+$("#calendarBtn").on("click", function() {
+  $("#calendar").show();
+  $('#chart').hide();
+  $("#arrival").hide();
+  $("#departures").hide();
+  $("#flightPlanner").hide();
+});
 
- $("#flightBtnA").on("click", function() {
-   $("#flightPlanner").show();
-   $("#arrivals").show();
-   $("#departures").hide();
-   $("#chart").hide();
-  });
+$("#flightBtnA").on("click", function () {
+  $("#flightPlanner").show();
+  $("#arrivals").show();
+  $("#departures").hide();
+  $("#chart").hide();
+  $("#calendar").hide();
+});
 
-  $("#flightBtnB").on("click", function(){
-    $("#flightPlanner").show();
-    $("#departures").show();
-    $("#arrivals").hide();
-    $("#chart").hide();
-   });
+$("#flightBtnB").on("click", function () {
+  $("#flightPlanner").show();
+  $("#departures").show();
+  $("#arrivals").hide();
+  $("#chart").hide();
+  $("#calendar").hide();
+});
 
-   
+$("#Customers").on("click", function(){
+  $("#departures").hide();
+  $("#arrivals").hide();
+  $("#chart").hide();
+  $("#calendar").hide();
+});
 
-  //$("#Customers").on("click", function(){
-    //console.log('hi');
-    //});
-
-  $("#reportsBtn").on("click", function(){
-    $("#chart").show();
-    $("#departures").hide();
-    $("#arrivals").hide();
-   });
-
-
-
-
+$("#reportsBtn").on("click", function () {
+  $("#chart").show();
+  $("#departures").hide();
+  $("#arrivals").hide();
+  $("#calendar").hide();
+});
