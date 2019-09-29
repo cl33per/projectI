@@ -54,11 +54,7 @@ $(document).ready(function () {
       writeUserData(user.uid, user.displayName, user.email, user.photoURL);
 
     } else {
-      $('#chart').hide();
-      $("#arrival").hide();
-      $("#departures").hide();
-      $("#flightPlanner").hide();
-      $("#calendar").hide();
+      
     }
   });
 
