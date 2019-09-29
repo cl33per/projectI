@@ -52,6 +52,7 @@ $(document).ready(function () {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       writeUserData(user.uid, user.displayName, user.email, user.photoURL);
+
     } else {
       $('#chart').hide();
       $("#arrival").hide();
@@ -79,11 +80,11 @@ $(document).ready(function () {
   }
 
   $('#signOut').on("click", function () {
-  firebase.auth().signOut().then(function () {
-    // Sign-out successful.
-    
-  }).catch(function (error) {
-    // An error happened.
+    firebase.auth().signOut().then(function () {
+      // Sign-out successful.
+      location.reload();
+    }).catch(function (error) {
+      // An error happened.
+    });
   });
-});
 });
