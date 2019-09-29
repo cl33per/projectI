@@ -18,7 +18,7 @@ $(document).ready( function(){
   var settings = {
     "async": true,
     "crossDomain": true,
-     "url": "https://cors-anywhere.herokuapp.com/https://api.flightstats.com/flex/fids/rest/v1/json/RIC/arrivals?appId=ef50a4ca&appKey=b835c4c564ed17e6ddeb8fab099adcc5&requestedFields=airlineName%2Cflight%2Ccity%2CcurrentTime%2Cgate%2Cremarks&includeCodeshares=false&timeWindowBegin=240&timeWindowEnd=240&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=true",
+     "url": "https://cors-anywhere.herokuapp.com/https://api.flightstats.com/flex/fids/rest/v1/json/RIC/arrivals?appId=3ece2805&appKey=44557946c597aa486ebedb5f2319cb44&requestedFields=airlineName%2Cflight%2Ccity%2CcurrentTime%2Cgate%2Cremarks&includeCodeshares=false&timeWindowBegin=240&timeWindowEnd=240&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=true",
     "method": "GET",
     "headers": {
       "cache-control": "no-cache",
@@ -126,7 +126,7 @@ function flightstats_departures_search() {
   var settings = {
     "async": true,
     "crossDomain": true,
-     "url": "https://cors-anywhere.herokuapp.com/https://api.flightstats.com/flex/fids/rest/v1/json/RIC/departures?appId=ef50a4ca&appKey=b835c4c564ed17e6ddeb8fab099adcc5&requestedFields=airlineName%2Cflight%2Ccity%2CcurrentTime%2Cgate%2Cremarks&includeCodeshares=false&timeWindowBegin=240&timeWindowEnd=240&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=true",
+     "url": "https://cors-anywhere.herokuapp.com/https://api.flightstats.com/flex/fids/rest/v1/json/RIC/departures?appId=3ece2805&appKey=44557946c597aa486ebedb5f2319cb44&requestedFields=airlineName%2Cflight%2Ccity%2CcurrentTime%2Cgate%2Cremarks&includeCodeshares=false&timeWindowBegin=240&timeWindowEnd=240&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=true",
     "method": "GET",
     "headers": {
       "cache-control": "no-cache",
@@ -224,8 +224,8 @@ var newRow = $("<tr>").append(
 flightstats_arrivals_search();
 flightstats_departures_search();
 
-var timeInterval_arr = setInterval(arrivals_form_list, 1000 * refresh_scroll_seconds);
-var timeInterval_dep = setInterval(departures_form_list, 1000 * refresh_scroll_seconds);
+// var timeInterval_arr = setInterval(arrivals_form_list, 1000 * refresh_scroll_seconds);
+// var timeInterval_dep = setInterval(departures_form_list, 1000 * refresh_scroll_seconds);
 //var timeInterval_ajax = setInterval(arrival_ajax_refresh, 3600000 * refresh_ajax_pull_minutes);
 
 });

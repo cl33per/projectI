@@ -36,7 +36,8 @@
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">A.A. Dashboard</a>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a href="" class="btn btn-secondary btn-rounded" data-toggle="modal" data-target="#modalLRForm" id="signOut">Sign
+                <a href="" class="btn btn-secondary btn-rounded" data-toggle="modal" data-target="#modalLRForm"
+                    id="signOut">Sign
                     Out</a>
             </li>
         </ul>
@@ -118,10 +119,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
- 
-
                             <a class="nav-link" href="https://github.com/tonywaterfieldrva" target="_blank" id="name">
-
                                 <span data-feather="file-text"></span>
                                 Tony Waterfield
                             </a>
@@ -134,30 +132,30 @@
             </nav>
             <!-- End of Sidebar -->
             <!-- Star of Main Body -->
-            <main role="main" class="col-md-9  col-lg-10 px-4">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                          <div class="col-ls-12 mx-auto" id="calendar"></div>
+                    <div class="col-ls-12 mx-auto" id="calendar"></div>
                     <div id="flightPlanner">
                         <div class="row" id="arrivals">
                             <div class="col-lg-12">
-                            <div class="card-header" id="card-header-arrival">Arrivals</div>
-                            <div class="card-body">
-                                <table class="table table-sm table-hover" id='arrivals-table'>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Airline</th>
-                                            <th scope="col">Flight#</th>
-                                            <th scope="col">From City</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Arrival Time</th>
-                                            <th scope="col">Gate</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
+                                <div class="card-header" id="card-header-arrival">Arrivals</div>
+                                <div class="card-body">
+                                    <table class="table table-sm table-hover" id='arrivals-table'>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Airline</th>
+                                                <th scope="col">Flight#</th>
+                                                <th scope="col">From City</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Arrival Time</th>
+                                                <th scope="col">Gate</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
                         </div>
                         <!--  DEPARTURES -->
                         <div class="row" id="departures">
@@ -192,8 +190,7 @@
                     </div>
                 </div>
         </div>
-    </main>
-   
+        </main>
     </div>
     <!--/.Content-->
     </div>
@@ -203,8 +200,8 @@
     <!-- End of Main Body -->
     </div>
     <!-- Footer Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -235,18 +232,18 @@
     <script src='assets/js/app.js'></script>
     <script src='assets/js/chart.js'></script>
     <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/fullcalendar.min.js"></script> 
+    <script src="assets/js/fullcalendar.min.js"></script>
     <script src="assets/js/googlecalendarintegration.js"></script>
-    <script src='assets/js/flight.js'></script>
+    <!-- <script src='assets/js/flight.js'></script> -->
     <script>
-    $(function(){
-    $('#calendar').fullCalendar({
-    googleCalendarApiKey: 'AIzaSyABIl9Bw1hKOBTLMyT2LBvjW210yoEYCXs',
-    events: {
-    googleCalendarId: 'corporateexecutive0@gmail.com'
-    }
-    });
-    });
+        $(function () {
+            $('#calendar').fullCalendar({
+                googleCalendarApiKey: 'AIzaSyABIl9Bw1hKOBTLMyT2LBvjW210yoEYCXs',
+                events: {
+                    googleCalendarId: 'corporateexecutive0@gmail.com'
+                }
+            });
+        });
     </script>
 </body>
 

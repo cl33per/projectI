@@ -1,10 +1,11 @@
 $(document).ready(function () {
-  $('#chart').hide();
-  $('#arrival').hide();
-  $('#departures').hide();
-  $('#flightPlanner').hide();
-  $('#calendar').hide();
+$('#arrival').hide();
+$('#departures').hide();
+$('#flightPlanner').hide();
+$('#calendar').hide();
+$('#chart').hide();
 });
+
 
 $("#calendarBtn").on("click", function() {
   $("#calendar").show();
