@@ -1,8 +1,11 @@
 
 # ProjectI
-
+![GitHub followers](https://img.shields.io/github/followers/cl33per?style=social)
+[![GitHub issues](https://img.shields.io/github/issues/cl33per/projectI)](https://github.com/cl33per/projectI/issues)
+![GitHub](https://img.shields.io/github/license/cl33per/projectI)
+![GitHub top language](https://img.shields.io/github/languages/top/cl33per/projectI)
+![GitHub last commit](https://img.shields.io/github/last-commit/cl33per/projectI)
   
-
 ### Summary
 
 ProjectI also is known as the Assistant's Assistant Dashboard or A.A. Dashboard for short. A.A. Dashboard is made to incorporate travel planes, render reports, and integrate with google calendar with a logged-in Executive Assistant that are representing executives and making travel plans. 
